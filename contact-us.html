@@ -55,24 +55,22 @@
     <link rel="apple-touch-icon" href="assets/imgs/fav.png" />
 
     <style>
-        .error {
+        .error-message {
             color: red;
             font-size: 14px;
+            display: none;
         }
 
-        .success {
-            color: green;
-            font-size: 14px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
+        #loader {
+            display: none;
+            font-size: 18px;
+            color: blue;
         }
     </style>
 </head>
 
 <body class="screen_fade">
-   <section>
+    <section>
         <div class="PageTransitions__mainWrapper"
             style="animation-duration: 0.72s;background-color:#000;display: none;">
         </div>
@@ -86,7 +84,7 @@
         <div class="container">
 
             <!-- Logo -->
-           <a class="logo icon-img-100 transition" href="index.html">
+            <a class="logo icon-img-100 transition" href="index.html">
                 <img src="assets/imgs/logo-dark.png" alt="logo">
             </a>
 
@@ -319,7 +317,36 @@
                         <div class="sec-head mb-50">
                             <h3 class="text-u ls1">Send a <span class="fw-200">message</span></h3>
                         </div>
-                        <form id="contact-form" method="post" action="contact.php" onsubmit="return validateForm()">
+
+                        <div id="response"></div>
+
+
+                        <form id="contact-form">
+                            <div class="messages"></div>
+
+                            <label for="form_name">Name</label>
+                            <input id="form_name" type="text" name="name" placeholder="Name">
+                            <small class="error-message" id="name_error">Name is required</small>
+
+                            <label for="form_email">Email</label>
+                            <input id="form_email" type="email" name="email" placeholder="Email">
+                            <small class="error-message" id="email_error">Valid email is required</small>
+
+                            <label for="form_subject">Subject</label>
+                            <input id="form_subject" type="text" name="subject" placeholder="Subject">
+
+                            <label for="form_message">Message</label>
+                            <textarea id="form_message" name="message" placeholder="Message" rows="4"></textarea>
+                            <small class="error-message" id="message_error">Message is required</small>
+
+                            <button type="submit">Let's Talk</button>
+                        </form>
+
+                        <div id="loader">Sending...</div>
+                        <div id="response"></div>
+
+
+                        <!-- <form id="contact-form" method="post" action="contact.php" onsubmit="return validateForm()">
                             <div class="messages"></div>
 
                             <div class="controls row">
@@ -350,13 +377,13 @@
                                         <small class="error-message text-danger" id="message_error"></small>
                                     </div>
                                     <div class="mt-30">
-                                        <button type="submit" class="butn butn-full butn-bord radius-30">
+                                        <button type="submit" value="send message" class="butn butn-full butn-bord radius-30">
                                             <span class="text">Let's Talk</span>
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>
@@ -420,7 +447,7 @@
                 <div class="col-lg-2">
                     <div class="column">
                         <h6 class="sub-title mb-30">Our Services</h6>
-                         <ul class="rest fz-14">
+                        <ul class="rest fz-14">
                             <li class="mb-15">
                                 <a href="web-designing-company.html" class="transition">Web Development</a>
                             </li>
@@ -497,40 +524,70 @@
     <script src=" assets/js/scripts.js"></script>
 
     <script>
-        function validateForm() {
-            let isValid = true;
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
 
+            let isValid = true;
             let name = document.getElementById("form_name").value.trim();
             let email = document.getElementById("form_email").value.trim();
             let message = document.getElementById("form_message").value.trim();
 
-            document.getElementById("name_error").innerText = "";
-            document.getElementById("email_error").innerText = "";
-            document.getElementById("message_error").innerText = "";
+            let nameError = document.getElementById("name_error");
+            let emailError = document.getElementById("email_error");
+            let messageError = document.getElementById("message_error");
+            let loader = document.getElementById("loader");
 
-            // Name validation
-            if (name === "" || !/^[a-zA-Z ]+$/.test(name)) {
-                document.getElementById("name_error").innerText = "Please enter a valid name (only letters and spaces).";
+            // Reset errors
+            nameError.style.display = "none";
+            emailError.style.display = "none";
+            messageError.style.display = "none";
+
+            // Validate Name
+            if (name === "") {
+                nameError.style.display = "block";
                 isValid = false;
             }
 
-            // Corrected Email validation
-            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (email === "" || !emailPattern.test(email)) {
-                document.getElementById("email_error").innerText = "Please enter a valid email address.";
+            // Validate Email
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailPattern)) {
+                emailError.style.display = "block";
                 isValid = false;
             }
 
-            // Message validation
+            // Validate Message
             if (message === "") {
-                document.getElementById("message_error").innerText = "Message field cannot be empty.";
+                messageError.style.display = "block";
                 isValid = false;
             }
 
-            return isValid;
-        }
-    </script>
+            if (isValid) {
+                loader.style.display = "block"; // Show loader
 
+                let formData = new FormData(this);
+                fetch("contact.php", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        loader.style.display = "none"; // Hide loader
+
+                        if (data.trim() === "success") {
+                            window.location.href = "success.html"; // Redirect on success
+                        } else {
+                            document.getElementById("response").innerHTML = '<p style="color:red;">' + data + '</p>';
+                        }
+
+                        document.getElementById("contact-form").reset(); // Clear form
+                    })
+                    .catch(error => {
+                        loader.style.display = "none"; // Hide loader
+                        document.getElementById("response").innerHTML = '<p style="color:red;">Error sending message.</p>';
+                    });
+            }
+        });
+    </script>
     <!-- custom scripts -->
 
 </body>
