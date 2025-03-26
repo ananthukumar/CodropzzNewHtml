@@ -1376,3 +1376,21 @@ $(function () {
         });
     }
 });
+
+
+$('.transition').on('click', function (e) {
+    e.preventDefault(); // prevent default anchor behavior
+    var goTo = this.getAttribute("href"); // store anchor href
+    // TRANSITION
+    var transition = $('.PageTransitions__mainWrapper ');
+    transition.css({ 'display': '' });
+    transition.addClass('PageTransitions__mainWrapperAnimation--onboard');
+    setTimeout(function () {
+        transition.css({ 'display': 'none' });
+        transition.removeClass('PageTransitions__mainWrapperAnimation--onboard');
+    }, 2000);
+
+    setTimeout(function () {
+        window.location = goTo;
+    }, 800); // time in ms
+});
