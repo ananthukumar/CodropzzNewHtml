@@ -55,13 +55,22 @@
 
 </head>
 
-<body>
+<body class="screen_fade">
+   <section>
+        <div class="PageTransitions__mainWrapper"
+            style="animation-duration: 0.72s;background-color:#000;display: none;">
+        </div>
+        <div class="PageTransitions__mainWrapper"
+            style="animation-delay: 0.13s;animation-duration: 0.81s;background-color: rgb(255, 255, 255);display: none;">
+        </div>
+    </section>
 
-    <nav class="navbar navbar-expand-lg change blur">
+
+    <nav class="navbar navbar-expand-lg change blur ">
         <div class="container">
 
             <!-- Logo -->
-            <a class="logo icon-img-100" href="index.html">
+           <a class="logo icon-img-100 transition" href="index.html">
                 <img src="assets/imgs/logo-dark.png" alt="logo">
             </a>
 
@@ -69,30 +78,48 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link " data-toggle="dropdown" href="index.html" role="button" aria-haspopup="true"
+                        <a class="nav-link transition transition " data-toggle="dropdown" href="index.html" role="button" aria-haspopup="true"
                             aria-expanded="false"><span class="rolling-text">Home</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-us.html"><span class="rolling-text">About
-                                Us</span></a>
+                        <a class="nav-link transition" href="about-us.html"><span class="rolling-text">Who We Are
+                            </span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html"><span class="rolling-text">Services
+                        <a class="nav-link transition" href="services.html"><span class="rolling-text">Services
+                            </span></a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link transition" href="works.html"><span class="rolling-text">Works
                             </span></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact-us.html"><span class="rolling-text">Contact
+                        <a class="nav-link transition" href="contact-us.html"><span class="rolling-text">Contact
                                 Us</span></a>
                     </li>
                 </ul>
+            </div>
+            <div class="call-btn d-none d-lg-block">
+                <a class="" href="tel:+917012459490">
+                    <svg fill="var(--white)" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z">
+                        </path>
+                    </svg>
+                </a>
             </div>
             <div class="d-none d-lg-block">
                 <a href="contact-us.html" class="btn-quote">Get a Quote</a>
             </div>
             <div class="topnav d-lg-none">
-                <div class="menu-icon cursor-pointer">
-                    <span class="icon ti-align-right"></span>
+                <div class="menu-icon cursor-pointer p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    <!-- <span class="icon ti-align-right"></span> -->
                 </div>
             </div>
         </div>
@@ -102,7 +129,13 @@
         <div class="logo icon-img-100">
             <img src="assets/imgs/logo-dark.png" alt="">
         </div>
-        <div class="close-menu cursor-pointer ti-close"></div>
+        <div class="close-menu cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
@@ -132,6 +165,12 @@
                                 <div class="o-hidden">
                                     <a href="services.html" class="link"><span class="fill-text"
                                             data-text="Service">Service</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                                                       <a href="works.html" class="link"><span class="fill-text" data-text="Works">Works</span></a>
+
                                 </div>
                             </li>
                             <li>
@@ -186,260 +225,259 @@
 
 
 
-<!-- ==================== Start Header ==================== -->
-<section class="pt-110">
-                    <div class="container-fluid ">
-                        <div class=" text-center">
-                            <h3 class="hero-heading mx-auto">Mobile App Development
-                            </h3>
+    <!-- ==================== Start Header ==================== -->
+    <section class="pt-110">
+        <div class="container-fluid ">
+            <div class=" text-center">
+                <h1 class="hero-heading mx-auto">Mobile App Development
+                </h1>
 
+            </div>
+        </div>
+    </section>
+    <!-- ==================== End Header ==================== -->
+
+
+
+    <!-- ==================== Start Services ==================== -->
+
+    <section class="services-details section-padding-btm">
+        <div class="container">
+            <div class="sec-head text-center mb-80">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div>
+                            <!-- <h6 class="sub-title main-color mb-15">Mobileapp Development</h6> -->
+                            <h4>we provide expert mobile app development services for both iOS and Android
+                                platforms. Our focus is on creating user-friendly apps that deliver seamless
+                                functionality and engaging experiences. Let us turn your ideas into powerful
+                                mobile solutions that drive growth and connect with your audience.
+
+
+
+
+
+                            </h4>
                         </div>
                     </div>
-                </section>  
-<!-- ==================== End Header ==================== -->
+                </div>
+            </div>
+            <div class="row serv-imgs mt-80">
+                <div class="col-lg-4">
+                    <div class="img o-hidden radius-15 fit-img md-mb30">
+                        <img src="assets/imgs/m1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="img o-hidden radius-15">
+                        <img src="assets/imgs/m2.jpg" alt="" data-speed="auto" data-lag="0">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-80">
+                <div class="col-lg-4">
+                    <div class="text md-mb50">
+                        <h4 class="pb-2">What We Offer</h4>
+                        <p>we provide a full suite of mobile app development services tailored to your
+                            needs. Our offerings include custom app development for iOS and Android,
+                            ensuring a personalized approach that aligns with your business goals. We also
+                            focus on UI/UX design to create engaging user experiences and offer backend
+                            development for seamless integration. With ongoing support and maintenance, we
+                            ensure your app remains up-to-date and performs at its best, helping you connect
+                            with your audience effectively.
 
 
 
-<!-- ==================== Start Services ==================== -->
-
-<section class="services-details section-padding-btm">
-    <div class="container">
-        <div class="sec-head text-center mb-80">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div>
-                        <!-- <h6 class="sub-title main-color mb-15">Mobileapp Development</h6> -->
-                        <h4>we provide expert mobile app development services for both iOS and Android
-                            platforms. Our focus is on creating user-friendly apps that deliver seamless
-                            functionality and engaging experiences. Let us turn your ideas into powerful
-                            mobile solutions that drive growth and connect with your audience.
 
 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <h5 class="pb-4">Serving across a variety of industries and leaving our mark in
+                            every one of them.</h5>
+                        <div class="col-md-6">
 
-
-
-                        </h4>
+                            <ul class="rest list-arrow">
+                                <li class="nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Real Estate.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Automobile.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Beauty.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Construction.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Corprate.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Electronics.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Travel & Tourism.</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="rest list-arrow">
+                                <li class="nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Engineering Services.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Fasion.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Financial.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Healthcare.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Hospitality.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Manufacturing.</h6>
+                                </li>
+                                <li class="mt-10 nowrap">
+                                    <span class="icon">
+                                        <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                                                fill="#14cf93"></path>
+                                        </svg>
+                                    </span>
+                                    <h6 class="inline fw-400">Media.</h6>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row serv-imgs mt-80">
-            <div class="col-lg-4">
-                <div class="img o-hidden radius-15 fit-img md-mb30">
-                    <img src="assets/imgs/m1.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="img o-hidden radius-15">
-                    <img src="assets/imgs/m2.jpg" alt="" data-speed="auto" data-lag="0">
-                </div>
-            </div>
-        </div>
-        <div class="row mt-80">
-            <div class="col-lg-4">
-                <div class="text md-mb50">
-                    <h4 class="pb-2">What We Offer</h4>
-                    <p>we provide a full suite of mobile app development services tailored to your
-                        needs. Our offerings include custom app development for iOS and Android,
-                        ensuring a personalized approach that aligns with your business goals. We also
-                        focus on UI/UX design to create engaging user experiences and offer backend
-                        development for seamless integration. With ongoing support and maintenance, we
-                        ensure your app remains up-to-date and performs at its best, helping you connect
-                        with your audience effectively.
+    </section>
 
-
-
-
-
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="row">
-                    <h5 class="pb-4">Serving across a variety of industries and leaving our mark in
-                        every one of them.</h5>
-                    <div class="col-md-6">
-
-                        <ul class="rest list-arrow">
-                            <li class="nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Real Estate.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Automobile.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Beauty.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Construction.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Corprate.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Electronics.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Travel & Tourism.</h6>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="rest list-arrow">
-                            <li class="nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Engineering Services.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Fasion.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Financial.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Healthcare.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Hospitality.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Manufacturing.</h6>
-                            </li>
-                            <li class="mt-10 nowrap">
-                                <span class="icon">
-                                    <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
-                                            fill="#14cf93"></path>
-                                    </svg>
-                                </span>
-                                <h6 class="inline fw-400">Media.</h6>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-</main>
+    </main>
     <footer class="clean-footer crev bg-img" data-background="assets/imgs/header/bg1.jpg" data-overlay-dark="10">
         <div class="container pb-40 section-padding ontop">
             <div class="cal-action pb-50 mb-80 bord-thin-bottom">
                 <h2 class="fz-120 line-height-1 d-rotate wow">
-                    <span class="rotate-text"><a href="contact-us.html">Let’s Contact <span
-                                class="ml-30 fz-70 ti-arrow-top-right"></span></a></span>
+                    <span class="rotate-text"><a href="contact-us.html">Let’s Contact</a></span>
                 </h2>
             </div>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo icon-img-100">
-                        <h3>Codropzz</h3>
+                        <img src="/assets/imgs/logo-light.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -462,39 +500,47 @@
                         <h6 class="sub-title mb-30">Useful Links</h6>
                         <ul class="rest fz-14">
                             <li class="mb-15">
-                                <a href="index.html">Home</a>
+                                <a href="index.html" class="transition">Home</a>
                             </li>
                             <li class="mb-15">
-                                <a href="services.html">Services</a>
+                                <a href="about-us.html" class="transition">Who We Are</a>
                             </li>
                             <li class="mb-15">
-                                <a href="about-us.html">About Us</a>
+                                <a href="services.html" class="transition">Services</a>
                             </li>
+
                             <li>
-                                <a href="contact-us.html">Contact Us</a>
+                                <a href="contact-us.html" class="transition">Contact Us</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="col-lg-2">
-                            <div class="column">
-                                <h6 class="sub-title mb-30">Support</h6>
-                                <ul class="rest fz-14">
-                                    <li class="mb-15">
-                                        <a href="page-FAQS.html">FAQS</a>
-                                    </li>
-                                    <li class="mb-15">
-                                        <a href="page-about.html">Term & Conditions</a>
-                                    </li>
-                                    <li class="mb-15">
-                                        <a href="page-about.html">Privacy policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="page-about.html">Help</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
+                <div class="col-lg-2">
+                    <div class="column">
+                        <h6 class="sub-title mb-30">Our Services</h6>
+                        <ul class="rest fz-14">
+                            <li class="mb-15">
+                                <a href="web-designing-company.html" class="transition">Web Development</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="mobile-app-development.html" class="transition">Mobile App Development</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="ui-ux-design.html" class="transition">UI/UX Design</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="ecommerce-development.html" class="transition">E-Commerce</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="cms-development.html" class="transition">CMS Development</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="digital-marketting.html" class="transition">Digital Marketing</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="d-flex align-items-center pt-30 pb-30 mt-80 bord-thin-top">
                 <div>
@@ -523,7 +569,7 @@
                     </ul>
                 </div>
                 <div class="ml-auto">
-                    <p class="fz-14">Codropzz © 2024 All rights reserved <span class="underline main-color"><a href=""
+                    <p class="fz-14">codropzz technologies © 2024 All rights reserved <span class="underline main-color"><a href=""
                                 target="_blank"></a></span>
                     </p>
                 </div>

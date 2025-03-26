@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -53,15 +54,39 @@
     <link rel="apple-touch-icon" href="assets/imgs/fav.png" />
     <link rel="apple-touch-icon" href="assets/imgs/fav.png" />
 
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
-<body>
+<body class="screen_fade">
+   <section>
+        <div class="PageTransitions__mainWrapper"
+            style="animation-duration: 0.72s;background-color:#000;display: none;">
+        </div>
+        <div class="PageTransitions__mainWrapper"
+            style="animation-delay: 0.13s;animation-duration: 0.81s;background-color: rgb(255, 255, 255);display: none;">
+        </div>
+    </section>
 
-    <nav class="navbar navbar-expand-lg change blur">
+
+    <nav class="navbar navbar-expand-lg change blur ">
         <div class="container">
 
             <!-- Logo -->
-            <a class="logo icon-img-100" href="index.html">
+           <a class="logo icon-img-100 transition" href="index.html">
                 <img src="assets/imgs/logo-dark.png" alt="logo">
             </a>
 
@@ -69,30 +94,48 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link " data-toggle="dropdown" href="index.html" role="button" aria-haspopup="true"
-                            aria-expanded="false"><span class="rolling-text">Home</span></a>
+                        <a class="nav-link transition " data-toggle="dropdown" href="index.html" role="button"
+                            aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Home</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-us.html"><span class="rolling-text">About
-                                Us</span></a>
+                        <a class="nav-link transition" href="about-us.html"><span class="rolling-text">Who We Are
+                            </span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html"><span class="rolling-text">Services
+                        <a class="nav-link transition" href="services.html"><span class="rolling-text">Services
+                            </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link transition" href="works.html"><span class="rolling-text">Works
                             </span></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact-us.html"><span class="rolling-text">Contact
+                        <a class="nav-link transition" href="contact-us.html"><span class="rolling-text">Contact
                                 Us</span></a>
                     </li>
                 </ul>
             </div>
+            <div class="call-btn d-none d-lg-block">
+                <a class="" href="tel:+917012459490">
+                    <svg fill="var(--white)" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
             <div class="d-none d-lg-block">
-                <a href="contact-us.html" class="btn-quote">Get a Quote</a>
+                <a href="contact-us.html" class="btn-quote transition">Get a Quote</a>
             </div>
             <div class="topnav d-lg-none">
-                <div class="menu-icon cursor-pointer">
-                    <span class="icon ti-align-right"></span>
+                <div class="menu-icon cursor-pointer p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    <!-- <span class="icon ti-align-right"></span> -->
                 </div>
             </div>
         </div>
@@ -102,7 +145,13 @@
         <div class="logo icon-img-100">
             <img src="assets/imgs/logo-dark.png" alt="">
         </div>
-        <div class="close-menu cursor-pointer ti-close"></div>
+        <div class="close-menu cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
@@ -132,6 +181,13 @@
                                 <div class="o-hidden">
                                     <a href="services.html" class="link"><span class="fill-text"
                                             data-text="Service">Service</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="works.html" class="link"><span class="fill-text"
+                                            data-text="Works">Works</span></a>
+
                                 </div>
                             </li>
                             <li>
@@ -192,7 +248,7 @@
         <div class="container-fluid pt-100">
             <div class=" text-center">
 
-                <h3 class="hero-heading mx-auto">Let’s grow together
+                <h3 class="hero-heading mx-auto">Let's grow together
                 </h3>
                 <p class="hero_sub">Awesome, you finally made your decision here! Fill these forms & we will
                     contact you back.
@@ -219,7 +275,7 @@
                                     brilliant!</span></span>
                         </h2>
                         <p class="mt-20 mb-20">If you would like to work with us or just want to get in
-                            touch, we’d love to hear from you!</p>
+                            touch, we'd love to hear from you!</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="morinfo mt-30">
@@ -263,23 +319,21 @@
                         <div class="sec-head mb-50">
                             <h3 class="text-u ls1">Send a <span class="fw-200">message</span></h3>
                         </div>
-                        <form id="contact-form" method="post" action="">
-
+                        <form id="contact-form" method="post" action="contact.php" onsubmit="return validateForm()">
                             <div class="messages"></div>
 
                             <div class="controls row">
-
                                 <div class="col-lg-6">
                                     <div class="form-group mb-30">
-                                        <input id="form_name" type="text" name="name" placeholder="Name"
-                                            required="required">
+                                        <input id="form_name" type="text" name="name" placeholder="Name" required>
+                                        <small class="error-message text-danger" id="name_error"></small>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                     <div class="form-group mb-30">
-                                        <input id="form_email" type="email" name="email" placeholder="Email"
-                                            required="required">
+                                        <input id="form_email" type="email" name="email" placeholder="Email" required>
+                                        <small class="error-message text-danger" id="email_error"></small>
                                     </div>
                                 </div>
 
@@ -292,7 +346,8 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <textarea id="form_message" name="message" placeholder="Message" rows="4"
-                                            required="required"></textarea>
+                                            required></textarea>
+                                        <small class="error-message text-danger" id="message_error"></small>
                                     </div>
                                     <div class="mt-30">
                                         <button type="submit" class="butn butn-full butn-bord radius-30">
@@ -300,7 +355,6 @@
                                         </button>
                                     </div>
                                 </div>
-
                             </div>
                         </form>
                     </div>
@@ -319,14 +373,13 @@
         <div class="container pb-40 section-padding ontop">
             <div class="cal-action pb-50 mb-80 bord-thin-bottom">
                 <h2 class="fz-120 line-height-1 d-rotate wow">
-                    <span class="rotate-text"><a href="contact-us.html">Let’s Contact <span
-                                class="ml-30 fz-70 ti-arrow-top-right"></span></a></span>
+                    <span class="rotate-text"><a href="contact-us.html">Let’s Contact</a></span>
                 </h2>
             </div>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo icon-img-100">
-                        <h3>Codropzz</h3>
+                        <img src="/assets/imgs/logo-light.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -349,39 +402,47 @@
                         <h6 class="sub-title mb-30">Useful Links</h6>
                         <ul class="rest fz-14">
                             <li class="mb-15">
-                                <a href="index.html">Home</a>
+                                <a href="index.html" class="transition">Home</a>
                             </li>
                             <li class="mb-15">
-                                <a href="services.html">Services</a>
+                                <a href="about-us.html" class="transition">Who We Are</a>
                             </li>
                             <li class="mb-15">
-                                <a href="about-us.html">About Us</a>
+                                <a href="services.html" class="transition">Services</a>
                             </li>
+
                             <li>
-                                <a href="contact-us.html">Contact Us</a>
+                                <a href="contact-us.html" class="transition">Contact Us</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="col-lg-2">
-                            <div class="column">
-                                <h6 class="sub-title mb-30">Support</h6>
-                                <ul class="rest fz-14">
-                                    <li class="mb-15">
-                                        <a href="page-FAQS.html">FAQS</a>
-                                    </li>
-                                    <li class="mb-15">
-                                        <a href="page-about.html">Term & Conditions</a>
-                                    </li>
-                                    <li class="mb-15">
-                                        <a href="page-about.html">Privacy policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="page-about.html">Help</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
+                <div class="col-lg-2">
+                    <div class="column">
+                        <h6 class="sub-title mb-30">Our Services</h6>
+                         <ul class="rest fz-14">
+                            <li class="mb-15">
+                                <a href="web-designing-company.html" class="transition">Web Development</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="mobile-app-development.html" class="transition">Mobile App Development</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="ui-ux-design.html" class="transition">UI/UX Design</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="ecommerce-development.html" class="transition">E-Commerce</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="cms-development.html" class="transition">CMS Development</a>
+                            </li>
+                            <li class="mb-15">
+                                <a href="digital-marketting.html" class="transition">Digital Marketing</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="d-flex align-items-center pt-30 pb-30 mt-80 bord-thin-top">
                 <div>
@@ -410,8 +471,8 @@
                     </ul>
                 </div>
                 <div class="ml-auto">
-                    <p class="fz-14">Codropzz © 2024 All rights reserved <span class="underline main-color"><a href=""
-                                target="_blank"></a></span>
+                    <p class="fz-14">codropzz technologies © 2024 All rights reserved <span
+                            class="underline main-color"><a href="" target="_blank"></a></span>
                     </p>
                 </div>
             </div>
@@ -434,6 +495,41 @@
     <script src=" assets/js/smoother-script.js"></script>
 
     <script src=" assets/js/scripts.js"></script>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            let name = document.getElementById("form_name").value.trim();
+            let email = document.getElementById("form_email").value.trim();
+            let message = document.getElementById("form_message").value.trim();
+
+            document.getElementById("name_error").innerText = "";
+            document.getElementById("email_error").innerText = "";
+            document.getElementById("message_error").innerText = "";
+
+            // Name validation
+            if (name === "" || !/^[a-zA-Z ]+$/.test(name)) {
+                document.getElementById("name_error").innerText = "Please enter a valid name (only letters and spaces).";
+                isValid = false;
+            }
+
+            // Corrected Email validation
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "" || !emailPattern.test(email)) {
+                document.getElementById("email_error").innerText = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Message validation
+            if (message === "") {
+                document.getElementById("message_error").innerText = "Message field cannot be empty.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
 
     <!-- custom scripts -->
 
