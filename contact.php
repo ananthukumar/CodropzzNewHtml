@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Send email (Modify email settings as needed)
-    $to = "ananthukumar.c@email.com"; 
+    $to = "ananthukumar.c@gmail.com"; 
     $headers = "From: $email\r\nReply-To: $email";
     $body = "Name: $name\nEmail: $email\nSubject: $subject\nMessage:\n$message";
 
